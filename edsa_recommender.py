@@ -47,26 +47,12 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["About","Recommender System", "Solution Overview"]
+    page_options = ["Recommender System","About", "Solution Overview"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
     # -------------------------------------------------------------------
     page_selection = st.sidebar.selectbox("Choose Option", page_options)
-    
-    
-    if page_selection == "About":
-        st.title("About")
-        st.write("This is a Streamlit web application for a Movie Recommender Engine. It recommends movies based on either content-based or collaborative-based filtering algorithms. The content-based filtering algorithm recommends movies similar to the user's preferred movies, while the collaborative-based filtering algorithm recommends movies based on the preferences of users with similar tastes. This application is part of the Explore Data Science Academy Unsupervised Predict project.")
-        
-        
-        st.header("Meet the Team")
-        st.write("- **Ntsako Rivisi**")
-        st.write("- **Carol Ndlovu**")
-        st.write("- **Millicent Tsweleng**")
-        st.write("- **Sinethemba Sibiya**")
-        st.write("- **Aphiwe Maphumulo**")
-        st.write("- **Sonkhe Shongwe**")
     
     if page_selection == "Recommender System":
         # Header contents
@@ -129,6 +115,18 @@ def main():
     # -------------------------------------------------------------------
 
     # ------------- SAFE FOR ALTERING/EXTENSION -------------------
+    if page_selection == "About":
+        st.title("About")
+        st.write("This is a Streamlit web application for a Movie Recommender Engine. It recommends movies based on either content-based or collaborative-based filtering algorithms. The content-based filtering algorithm recommends movies similar to the user's preferred movies, while the collaborative-based filtering algorithm recommends movies based on the preferences of users with similar tastes. This application is part of the Explore Data Science Academy Unsupervised Predict project.")
+        
+        
+        st.header("Meet the Team")
+        st.write("- **Ntsako Rivisi**")
+        st.write("- **Carol Ndlovu**")
+        st.write("- **Millicent Tsweleng**")
+        st.write("- **Sinethemba Sibiya**")
+        st.write("- **Aphiwe Maphumulo**")
+        st.write("- **Sonkhe Shongwe**")
     if page_selection == "Solution Overview":
         st.title("Solution Overview")
         st.markdown('<style>img {max-width: 100%; height: 400px;}</style>', unsafe_allow_html=True)
